@@ -228,7 +228,7 @@ const Home = (props: HomeProps) => {
     const [endDate, setEndDate] = useState<Date>();
     const [isPresale, setIsPresale] = useState(false);
     const [isWLOnly, setIsWLOnly] = useState(false);
-
+//a
     const [alertState, setAlertState] = useState<AlertState>({
         open: false,
         message: "",
