@@ -218,7 +218,7 @@ const Home = (props: HomeProps) => {
     const [itemsRemaining, setItemsRemaining] = useState(0);
     const [isSoldOut, setIsSoldOut] = useState(false);
     const [payWithSplToken, setPayWithSplToken] = useState(false);
-    const [price, setPrice] = useState(0.04);
+    const [price, setPrice] = useState(0.00);
     const [priceLabel, setPriceLabel] = useState<string>("SOL");
     const [whitelistPrice, setWhitelistPrice] = useState(0);
     const [whitelistEnabled, setWhitelistEnabled] = useState(false);
@@ -242,7 +242,7 @@ const Home = (props: HomeProps) => {
     const [candyMachine, setCandyMachine] = useState<CandyMachineAccount>();
 
     const rpcUrl = props.rpcHost;
-    const solFeesEstimation = 0.012; // approx of account creation fees
+    const solFeesEstimation = 0.016; // approx of account creation fees
 
     const anchorWallet = useMemo(() => {
         if (
@@ -653,7 +653,7 @@ const Home = (props: HomeProps) => {
                             <h2>Mint a Just Cet</h2>
                             <br/>
                             <div><Price
-                                label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
+                                label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (0.00 + " " + priceLabel)}/><Image
                                 src="justcet.gif"
                                 alt="NFT To Mint"/></div>
                             <br/>
